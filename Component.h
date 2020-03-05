@@ -11,7 +11,7 @@ class TestType: public Component
 public:
     TestType()
     {
-        name = "TestType";
+        name = typeid(*this).name();
     }
     std::string test_string = "it works :)";
 };

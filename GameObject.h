@@ -8,13 +8,13 @@ public:
     template <typename T>
     void addComponent()
     {
-        T* obj = new T;
-        components.push_back(obj);
+        components.push_back(new T);
     }
 
     template <typename T>
-    T* getComponent(std::string name)    // bad iteration
+    T* getComponent()
     {
+	std::string name = typeid(T).name();
         for (Component* comp: components)
         {
             if (comp->name == name)
