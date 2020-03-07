@@ -1,3 +1,6 @@
+#ifndef __COMPONENT__
+#define __COMPONENT__
+
 #include <string>
 
 class Component
@@ -15,3 +18,5 @@ public:
     }
     std::string test_string = "it works :)";
 };
+
+#endif

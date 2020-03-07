@@ -7,6 +7,7 @@ int main()
     test_object.addComponent<TestType>();
 
     TestType* test_comp = test_object.getComponent<TestType>();
+    std::cout << test_object.removeComponent<TestType>() << std::endl;
     std::cout << test_comp->test_string << std::endl;
 
     return 0;
