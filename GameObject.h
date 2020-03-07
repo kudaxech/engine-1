@@ -9,9 +9,14 @@ class GameObject
 {
 public:
     template <typename T>
-    void addComponent()
+    bool addComponent()
     {
-        components.push_back(new T);
+        try
+        {
+            components.push_back(new T);
+            return true;
+        }
+        return false;
     }
 
     template <typename T>
