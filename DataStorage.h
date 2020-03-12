@@ -6,7 +6,7 @@
 class DataStorage{
     public:
 
-        bool createObject(std::string object_name){
+        bool addObject(std::string object_name){
 
             objects[object_name];
             return true;

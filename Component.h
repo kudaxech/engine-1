@@ -1,6 +1,7 @@
 #ifndef __COMPONENT__
 #define __COMPONENT__
 
+#include <SFML/Graphics.hpp>
 #include <string>
 
 class Component
@@ -17,6 +18,17 @@ public:
         name = typeid(*this).name();
     }
     std::string test_string = "it works :)";
+};
+
+class Renderer: public Component
+{
+public:
+    void draw() {}
+    void loadTexture(std::string) {}
+    void makeSprite() {}
+private:
+    sf::Texture texture;
+    sf::Sprite sprite;
 };
 
 #endif
